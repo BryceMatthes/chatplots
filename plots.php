@@ -43,10 +43,13 @@
 		            $user = htmlspecialchars($_GET["user"]);
 			        $month = htmlspecialchars($_GET["month"]);
 			        $combo = $user . '_' . $month;
-		            if (file_exists("plots/userplot_$combo.jpg")) {
-				        echo ("<td><img width='50%' src='plots/userplot_$combo.jpg'></td><tr>");
-				        echo ("<td><img width='50%' src='plots/emoteplot_$combo.jpg'></td></tr><tr>");
-		                echo ("<td><img width='50%' src='plots/hourplot_$combo.jpg'></td></tr>");
+		            if (file_exists("plots/hourplot_$combo.jpg")) {
+						echo ("<td><img width='50%' src='plots/wordcloud_$combo.png'></td><tr>");
+				        echo ("<td><img width='50%' src='plots/hourplot_$combo.jpg'></td><tr>");
+				        echo ("<td><img width='50%' src='plots/emotename_$combo.jpg'></td></tr><tr>");
+						echo ("<td><img width='50%' src='plots/emotepername_$combo.jpg'></td></tr>");
+		                echo ("<td><img width='50%' src='plots/username_$combo.jpg'></td></tr>");
+						echo ("<td><img width='50%' src='plots/heatname_$combo.jpg'></td></tr>");
                     }
 			        else{
 				        echo("<td><a href='index.html'><h1>no plots found. Please Generate</h1></a></td>"); //no file found, tell user to generate
